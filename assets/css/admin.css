@@ -1,0 +1,117 @@
+/* Admin Panel Styles */
+.admin-page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.admin-sidebar {
+    width: 240px;
+    background: #0d1117;
+    border-right: 1px solid var(--border);
+    padding: 1.5rem;
+    position: fixed;
+    height: 100vh;
+}
+
+.admin-badge {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--warning);
+    margin-top: 0.25rem;
+    margin-bottom: 2rem;
+}
+
+.admin-sidebar nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: var(--text-muted);
+    border-radius: var(--radius);
+    margin-bottom: 0.25rem;
+    text-decoration: none;
+}
+
+.admin-sidebar nav a:hover,
+.admin-sidebar nav a.active {
+    background: rgba(233,69,96,0.1);
+    color: var(--primary);
+}
+
+.admin-main {
+    flex: 1;
+    margin-left: 240px;
+    padding: 2rem;
+}
+
+.admin-header {
+    margin-bottom: 2rem;
+}
+
+.admin-header h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
+.admin-header span { color: var(--text-muted); font-size: 0.9rem; }
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.stat-label { color: var(--text-muted); font-size: 0.9rem; }
+.stat-warning .stat-value { color: var(--warning); }
+
+.users-section h2 { margin-bottom: 1rem; font-size: 1.25rem; }
+
+.users-table-wrap {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    overflow-x: auto;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.users-table th {
+    background: rgba(0,0,0,0.2);
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.users-table tr.banned { background: rgba(233,69,96,0.05); }
+.users-table tr:hover { background: rgba(255,255,255,0.02); }
+
+.actions-cell {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .admin-sidebar { position: relative; width: 100%; height: auto; }
+    .admin-main { margin-left: 0; }
+    .users-table { font-size: 0.85rem; }
+}
