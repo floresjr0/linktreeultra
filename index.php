@@ -1,3 +1,5 @@
+<!-- i hope ur ok arlynpot -->
+
 <?php
 require_once __DIR__ . '/includes/auth.php';
 ?>
